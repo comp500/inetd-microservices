@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/../MinGW/include",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include/c++",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include/c++/tr1"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=6",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/../MinGW/include/*",
+                    "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include",
+                    "${workspaceRoot}/../MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}
