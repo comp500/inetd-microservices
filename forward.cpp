@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
 	//logfile << std::cin.rdbuf();
 	// Read all lines
 	for (string line; getline(cin, line);) {
-		if (line.length < 1) {
+		if (line.length() < 1) {
 			break;
 		}
 		logfile << line << endl;
