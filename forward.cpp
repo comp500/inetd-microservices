@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <ctime>
+#include <string>
 using namespace std;
 
 int main(int argc, char* argv[]) {
@@ -22,11 +23,17 @@ int main(int argc, char* argv[]) {
 	logfile << endl;
 
 	// Pipe cin into logfile until EOF on cin
-	logfile << std::cin.rdbuf();
+	//logfile << std::cin.rdbuf();
+	// Read all lines
+	for (string line; getline(cin, line);) {
+		logfile << line << endl;
+	}
 
 	// Return HTTP response
 	cout << "HTTP/1.1 301 Moved Permanently\r\n";
 	cout << "Location: " << REDIRECT_ADDRESS << "\r\n";
+	// Chrome needs extra \r\n
+	cout << "\r\n";
 
 	logfile.close();
 	return 0;
