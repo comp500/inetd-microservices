@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 	// Open test.log for appending
 	logfile.open("test.log", ios::out | ios::app);
 	// Add log entry, with time and argument list
-	logfile << endl << "Connection recieved at " << asctime(localtime(&result));
+	logfile << "Connection recieved at " << asctime(localtime(&result));
 	logfile << "Arguments: ";
 	for (int i = 0; i < argc; i++) {
 		logfile << argv[i] << " ";
@@ -25,12 +25,12 @@ int main(int argc, char* argv[]) {
 	// Pipe cin into logfile until EOF on cin
 	//logfile << std::cin.rdbuf();
 	// Read all lines
-	for (string line; getline(cin, line);) {
+	/*for (string line; getline(cin, line);) {
 		if (line.length() < 1) {
 			break;
 		}
 		logfile << line << endl;
-	}
+	}*/
 
 	// Return HTTP response
 	cout << "HTTP/1.1 301 Moved Permanently\r\n";
